@@ -1,0 +1,28 @@
+/* main.css */
+:root {
+	--primary-color: #DFC2F2;  
+	--secondary-color: #CFB3CD;
+	--font-size: 16px;
+	--white-mode-primary-color: #344055; 
+	--white-mode-secondary-color: #888098;
+	--accent-color: #266DD3;
+	font-family: 'Open Sans';
+}
+
+body {
+	font-size: var(--font-size);
+	color: var(--white-mode-primary-color);
+}
+
+body::-webkit-scrollbar{
+	width: 1rem;
+}
+
+body::-webkit-scrollbar-track{
+	background: var(--white-mode-secondary-color);
+}
+
+body::-webkit-scrollbar-thumb{
+	background: var(--accent-color); 
+}
+
