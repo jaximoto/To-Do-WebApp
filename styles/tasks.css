@@ -1,7 +1,11 @@
 :root {
-	--bg-primary: #344055;
-	--bg-secondary: #CFB3CD;
-	--text-color: #CFB3CD;
+	--bg-primary: #2F394C;
+	--bg-secondary: #27303F;
+	--img-primary: #B878E2;
+	--img-secondary: #A656DC;
+	--text-primary: #C188E7;
+	--text-secondary: #CFB3CD;
+	--transition-speed: 600ms;
 }
 body {
 	margin: 0;
@@ -18,7 +22,7 @@ main {
 	height: 100vh;
 	position: fixed;
 	background-color: var(--bg-primary);
-	transition: 200ms ease;
+	transition: width 200ms ease;
 }
 
 .navbar-nav {
@@ -44,12 +48,15 @@ main {
 	height: 5rem;
 	text-decoration: none;
 	transition: var(--transition-speed);
-	color: var(--text-color);
+	color: var(--text-primary);
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
 }
-.nav-link:hover .colored {
-	filter: grayscale(0%) opacity(1);
-	fill: #B878E2;
 
+.nav-link:hover{
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary);
 }
 
 .link-text {
@@ -65,12 +72,15 @@ main {
 
 
 .inner{
-	opacity: 1;
-	fill: #B878E2;
+	fill: var(--img-secondary);
 }
 .colored {
-	opacity: 1;
-	fill: #DFC2F2;
+	fill: var(--img-primary);
+}
+
+.inner,
+.colored{
+	transition: var(--transition-speed);
 }
 
 .navbar:hover {
@@ -79,4 +89,6 @@ main {
 
 .navbar:hover .link-text {
 	display: block;
+	font-weight: bold;
+	letter-spacing: 0.1ch;
 }
