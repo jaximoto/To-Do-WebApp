@@ -37,6 +37,8 @@ main {
 	.navbar:hover .link-text {
 		display: inline;
 		transition: opacity var(--transition-speed);
+		font-weight: bold;
+		letter-spacing: 0.1ch;
 	}
 }
 
@@ -106,10 +108,6 @@ main {
 }
 
 
-.navbar:hover .link-text {
-	font-weight: bold;
-	letter-spacing: 0.1ch;
-}
 
 .logo {
 	font-weight: bold;
@@ -117,12 +115,11 @@ main {
 	margin-bottom: 1rem;
 	text-align: center;
 	color: var(--text-secondary);
-	background: var(--bg-secondary);
 	font-size: 1.5rem;
 	width: 100%;
 }
 
-.logo
+
 .logo svg {
 	transform: rotate(0deg);
 	transition: var(--transition-speed);
