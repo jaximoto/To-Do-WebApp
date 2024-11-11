@@ -6,6 +6,7 @@
 	--text-primary: #C188E7;
 	--text-secondary: #CFB3CD;
 	--transition-speed: 600ms;
+	--text-transition-speed: 800ms;
 }
 body {
 	margin: 0;
@@ -23,6 +24,7 @@ main {
 	position: fixed;
 	background-color: var(--bg-primary);
 	transition: width 200ms ease;
+	overflow: hidden;
 }
 
 .navbar-nav {
@@ -91,4 +93,25 @@ main {
 	display: block;
 	font-weight: bold;
 	letter-spacing: 0.1ch;
+	transition: var(--transition-speed);
+}
+
+.logo {
+	font-weight: bold;
+	white-space:nowrap;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: var(--text-secondary);
+	background: var(--bg-secondary);
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.logo svg {
+	transform: rotate(0deg);
+	transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+	transform: rotate(360deg);
 }
